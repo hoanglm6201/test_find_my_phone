@@ -3,5 +3,10 @@
   "hello": "Hello",
   "welcome": "Welcome to our app!",
   "english": "English",
-  "vietnamese": "Vietnamese"
+  "vietnamese": "Vietnamese",
+  "swipe_to_select_custom_sound_alert": "Swipe to select your custom sound alert",
+  "click_start_to_enable": "Click \"Start\" to enable",
+  "clap_finder_mode": "Clap Finder mode",
+  "active": "Active",
+  "stop": "Stop"
 }

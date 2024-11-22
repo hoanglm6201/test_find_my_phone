@@ -3,6 +3,12 @@
   "hello": "Xin chào",
   "welcome": "Chào mừng bạn đến với ứng dụng của chúng tôi!",
   "english": "Tiếng Anh",
-  "vietnamese": "Tiếng Việt"
+  "vietnamese": "Tiếng Việt",
+  "swipe_to_select_custom_sound_alert": "Swipe to select your custom sound alert",
+  "click_start_to_enable": "Click \"Start\" to enable",
+  "clap_finder_mode": "Clap Finder mode",
+  "active": "Active",
+  "stop": "Stop"
+
 
 }
