@@ -4,6 +4,7 @@ import 'package:infinite_listview/infinite_listview.dart';
 import 'package:test_find_my_phone/data/model/icon_sound_model.dart';
 import 'package:test_find_my_phone/utils/icon_sound.dart';
 import 'package:test_find_my_phone/utils/locator_support.dart';
+import 'package:test_find_my_phone/view/screens/setting/setting_screen.dart';
 
 class ClapDetectionScreen extends StatefulWidget {
   @override
@@ -68,6 +69,7 @@ class _ClapDetectionScreenState extends State<ClapDetectionScreen> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
+          color: Colors.transparent,
           image: DecorationImage(image: AssetImage('assets/images/img_background.png'), fit: BoxFit.cover)
         ),
         child: SafeArea(child: Stack(
@@ -81,7 +83,7 @@ class _ClapDetectionScreenState extends State<ClapDetectionScreen> {
               child: InkWell(
                 borderRadius: BorderRadius.circular(28),
                 onTap: (){
-
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingScreen()));
                 },
                 child: Container(
                   padding: const EdgeInsets.only(right: 12, left: 12, bottom: 12),
@@ -102,7 +104,7 @@ class _ClapDetectionScreenState extends State<ClapDetectionScreen> {
 
                     Image.asset('assets/images/ic_arrow_down.png', height: 86,),
                     const SizedBox(height: 8,),
-                    Text(context.locale.click_start_to_enable, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white.withOpacity(0.6)),),
+                    Text(isActive ? context.locale.click_stop_to_disable : context.locale.click_start_to_enable, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white.withOpacity(0.6)),),
                     Text(context.locale.clap_finder_mode, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white.withOpacity(0.6)),),
                     const SizedBox(height: 16,),
                     Container(

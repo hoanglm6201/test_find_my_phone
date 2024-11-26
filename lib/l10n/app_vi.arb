@@ -6,9 +6,29 @@
   "vietnamese": "Tiếng Việt",
   "swipe_to_select_custom_sound_alert": "Swipe to select your custom sound alert",
   "click_start_to_enable": "Click \"Start\" to enable",
+  "click_stop_to_disable": "Click \"Stop\" to disable",
   "clap_finder_mode": "Clap Finder mode",
   "active": "Active",
-  "stop": "Stop"
-
+  "stop": "Stop",
+  "clap_finder": "Clap Finder",
+  "battery_alarm": "Battery Alarm",
+  "live_wallpaper": "Live Wallpaper",
+  "setting": "Setting",
+  "duration": "Duration",
+  "vibration": "Vibration",
+  "flash_light": "Flash Light",
+  "text_general": "General",
+  "text_language": "Language",
+  "share_with_friends": "Share with friends",
+  "rate_us": "Rate us",
+  "term_of_service": "Term of service",
+  "policy_privacy": "Policy privacy",
+  "time_3_minutes": "3 minutes",
+  "text_constantly": "Constantly",
+  "sos": "SOS",
+  "rapid": "Rapid",
+  "symphony": "Symphony",
+  "text_none": "None",
+  "cancel": "Cancel"
 
 }

@@ -24,17 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-        ),
         Scaffold(
           backgroundColor: Colors.transparent,
           extendBody: true,
           extendBodyBehindAppBar: true,
           floatingActionButtonLocation:
           FloatingActionButtonLocation.centerDocked,
-
           bottomNavigationBar: BottomNavigation(
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,

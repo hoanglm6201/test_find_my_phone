@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:test_find_my_phone/utils/locator_support.dart';
 
 class BottomNavigation extends StatelessWidget {
   final int currentIndex;
@@ -52,7 +53,7 @@ class BottomNavigation extends StatelessWidget {
                   BottomNavigationBarItem(
                       icon: Padding(
                           padding: const EdgeInsets.only(bottom: 8, top: 8),
-                          child: SvgPicture.asset('assets/images/ic_battery_alarm.svg', width: 16, height: 16, colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.3), BlendMode.srcIn))
+                          child: SvgPicture.asset('assets/images/ic_clap_finder.svg', width: 16, height: 16, colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.3), BlendMode.srcIn))
                       ),
                       activeIcon: Padding(
                         padding: const EdgeInsets.only(bottom: 4.0),
@@ -67,11 +68,11 @@ class BottomNavigation extends StatelessWidget {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.only(bottom: 0),
-                            child: SvgPicture.asset('assets/images/ic_battery_alarm.svg', width: 20, height: 20, colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
+                            child: SvgPicture.asset('assets/images/ic_clap_finder.svg', width: 20, height: 20, colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
                           ),
                         ),
                       ),
-                      label: 'Test'
+                      label: context.locale.clap_finder
                   ),
                   BottomNavigationBarItem(
                       icon: Padding(
@@ -95,12 +96,12 @@ class BottomNavigation extends StatelessWidget {
                           ),
                         ),
                       ),
-                      label: 'Test'
+                      label: context.locale.battery_alarm
                   ),
                   BottomNavigationBarItem(
                       icon: Padding(
                         padding: const EdgeInsets.only(bottom: 8, top: 8),
-                        child: SvgPicture.asset('assets/images/ic_battery_alarm.svg', width: 20, height: 20, colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.3), BlendMode.srcIn)),
+                        child: SvgPicture.asset('assets/images/ic_live_wallpaper.svg', width: 20, height: 20, colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.3), BlendMode.srcIn)),
                       ),
                       activeIcon: Padding(
                         padding: const EdgeInsets.only(bottom: 4.0),
@@ -115,11 +116,11 @@ class BottomNavigation extends StatelessWidget {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.only(bottom: 0),
-                            child: SvgPicture.asset('assets/images/ic_battery_alarm.svg', width: 20, height: 20, colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
+                            child: SvgPicture.asset('assets/images/ic_live_wallpaper.svg', width: 20, height: 20, colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
                           ),
                         ),
                       ),
-                      label: 'Test'
+                      label: context.locale.live_wallpaper
                   ),
                 ],
               ),

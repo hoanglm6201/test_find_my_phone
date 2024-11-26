@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:test_find_my_phone/view/screens/clap_finder/clap_detection_screen.dart';
+import 'package:flutter/services.dart';
 import 'package:test_find_my_phone/view/screens/splash/splash_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -16,7 +15,10 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: SplashScreen(),
+      home: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.light,
+        child: SplashScreen(),
+      ),
     );
   }
 }
