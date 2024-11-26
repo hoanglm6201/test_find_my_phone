@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:test_find_my_phone/utils/locator_support.dart';
 import 'package:test_find_my_phone/view/screens/clap_finder/clap_detection_screen.dart';
+import 'package:test_find_my_phone/view/screens/home_screen/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToHome() {
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ClapDetectionScreen()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
   }
 
 
