@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_listview/infinite_listview.dart';
 import 'package:test_find_my_phone/data/model/icon_sound_model.dart';
@@ -7,8 +6,10 @@ import 'package:test_find_my_phone/utils/locator_support.dart';
 import 'package:test_find_my_phone/view/screens/setting/setting_screen.dart';
 
 class ClapDetectionScreen extends StatefulWidget {
+  const ClapDetectionScreen({super.key});
+
   @override
-  _ClapDetectionScreenState createState() => _ClapDetectionScreenState();
+  State<StatefulWidget> createState() => _ClapDetectionScreenState();
 }
 
 class _ClapDetectionScreenState extends State<ClapDetectionScreen> {
@@ -119,10 +120,17 @@ class _ClapDetectionScreenState extends State<ClapDetectionScreen> {
                       ),
                       child: TextButton(
                         onPressed: (){
+
                           setState(() {
                             isActive = !isActive;
                           });
                         },
+                        style: ButtonStyle(
+                            overlayColor: WidgetStateProperty.all(Colors.grey.withOpacity(0.2)),
+                          shape: WidgetStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                        ),
                         child: Stack(
                           children: [
                             Container(
@@ -208,7 +216,7 @@ class _ClapDetectionScreenState extends State<ClapDetectionScreen> {
                   width: isSelected ? 200 : 170,
                   height: isSelected ? 200 : 170,
                   decoration: BoxDecoration(
-                    gradient: isSelected ? const LinearGradient(colors: [Color(0xFF297DFC), Color(0xFF1221C2)], begin: Alignment.topCenter, end: Alignment.bottomCenter) : LinearGradient(colors: [Colors.black, Colors.black], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+                    gradient: isSelected ? const LinearGradient(colors: [Color(0xFF297DFC), Color(0xFF1221C2)], begin: Alignment.topCenter, end: Alignment.bottomCenter) : const LinearGradient(colors: [Colors.black, Colors.black], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                     borderRadius: BorderRadius.circular(40),
 
                   ),

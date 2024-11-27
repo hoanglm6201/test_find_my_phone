@@ -82,9 +82,15 @@ class _CustomSwitchState extends State<CustomSwitch>
             height: widget.height ?? 20.0,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.0),
-              color: _circleAnimation.value == Alignment.centerLeft
-                  ? widget.disableColor ?? const Color(0xFF808080)
-                  : widget.enableColor ?? const Color(0xFF2532C8),
+              gradient: LinearGradient(colors:
+                _circleAnimation.value == Alignment.centerLeft
+                    ? [const Color(0xFF808080), const Color(0xFF808080)]
+                    : [const Color(0xFF297DFC), const Color(0xFF1221C2)],
+              begin: Alignment.topCenter, end: Alignment.bottomCenter
+            ),
+              // color: _circleAnimation.value == Alignment.centerLeft
+              //     ? widget.disableColor ?? const Color(0xFF808080)
+              //     : widget.enableColor ?? const Color(0xFF2532C8),
             ),
             child: Padding(
               padding: const EdgeInsets.all(2.0),

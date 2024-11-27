@@ -36,5 +36,13 @@
   "portuguese": "Portuguese",
   "german": "German",
   "korean": "Korean",
-  "japanese": "Japanese"
+  "japanese": "Japanese",
+  "charing": "Charing",
+  "charing_description": "The sounds emitted are used to warn that the phone is unplugged while charging.",
+  "text_full": "Full",
+  "full_description": "The sounds emitted are used to warn the phone when the battery is fully charged.",
+  "text_low": "Low",
+  "low_description": "These sounds emit phone warnings below 20% and below 10%.",
+  "alarm_history": "Alarm History"
+
 }
