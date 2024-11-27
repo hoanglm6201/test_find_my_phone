@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_find_my_phone/utils/language.dart';
 import 'package:test_find_my_phone/utils/locator_support.dart';
 import 'package:test_find_my_phone/view/screens/language/widgets/language_item.dart';
 
@@ -10,8 +11,18 @@ class LanguageScreen extends StatefulWidget {
 }
 
 class _LanguageScreenState extends State<LanguageScreen> {
+  int _selectedIndex = 7;
+
+  void onSelectedIndexChange(int index){
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final items = Language(context).languageItems;
+
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -47,7 +58,16 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 ],
               ),
               const SizedBox(height: 20,),
-              const LanguageItem(),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: items.length,
+                  itemBuilder: (context, index){
+                    return InkWell(
+                      onTap: () => onSelectedIndexChange(index),
+                      child: LanguageItem(languageModel: items[index], isSelected: _selectedIndex == index));
+                  },
+                ),
+              )
             ],
           ),
         ),

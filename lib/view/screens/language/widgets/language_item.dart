@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:test_find_my_phone/data/model/language_model.dart';
+import 'package:test_find_my_phone/utils/language.dart';
 
 class LanguageItem extends StatefulWidget {
-  const LanguageItem({super.key});
+  final LanguageModel languageModel;
+  final bool isSelected;
+  const LanguageItem({super.key, required this.languageModel, required this.isSelected});
 
   @override
   State<LanguageItem> createState() => _LanguageItemState();
@@ -18,20 +22,27 @@ class _LanguageItemState extends State<LanguageItem> {
         color: Colors.white.withOpacity(0.1),
         borderRadius: BorderRadius.circular(15)
       ),
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
-              SizedBox(width: 20,),
+              const SizedBox(width: 20,),
               CircleAvatar(
                 radius: 16,
-                backgroundImage: AssetImage('assets/images/img_background.png'),
+                backgroundImage: AssetImage(widget.languageModel.asset),
               ),
-              SizedBox(width: 20,),
-              Text('Spanish', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16, color: Colors.white),)
+              const SizedBox(width: 20,),
+              Text(widget.languageModel.language, style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 16, color: Colors.white),)
             ]
           ),
+          if(widget.isSelected)
+            const Row(
+              children: [
+                Icon(Icons.check_circle_sharp, color: Colors.white, weight: 3, size: 28,),
+                SizedBox(width: 14,)
+              ],
+            ),
         ],
       ),
     );
